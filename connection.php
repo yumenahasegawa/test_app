@@ -50,19 +50,19 @@ function getAllRecords()
 
 // 
 // 
-// 
+//以下、口頭レビュー２の記述
 // 更新処理
-function updateTodoData($post)
-{
-    $dbh = connectPdo();
-    $sql = 'UPDATE todos SET content = "' . $post['content'] . '" WHERE id = ' . $post['id'];
-    $dbh->query($sql);
-}
+// function updateTodoData($post)
+// {
+//     $dbh = connectPdo();
+//     $sql = 'UPDATE todos SET content = "' . $post['content'] . '" WHERE id = ' . $post['id'];
+//     $dbh->query($sql);
+// }
 
-function getTodoTextById($id)
-{
-    $dbh = connectPdo();
-    $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL AND id = $id';
-    $data = $dbh->query($sql)->fetch();
-    return $data['content'];
-}
+// function getTodoTextById($id)
+// {
+//     $dbh = connectPdo();
+//     $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL AND id = $id';
+//     $data = $dbh->query($sql)->fetch();
+//     return $data['content'];
+// }

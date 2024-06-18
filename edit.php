@@ -1,4 +1,5 @@
-<?php
+<!-- 口頭レビュー２の記述 -->
+<!-- <?php
 require_once('functions.php');
 $todo = getSelectedTodo($_GET['id']);
 ?>
@@ -18,4 +19,4 @@ $todo = getSelectedTodo($_GET['id']);
     <a href="index.php">一覧へもどる</a>
   </div>
 </body>
-</html>
+</html> -->
