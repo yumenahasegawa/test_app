@@ -1,6 +1,6 @@
 <?php //追記
 require_once('functions.php'); //追記
-?> //追記
+?> 
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -32,7 +32,7 @@ require_once('functions.php'); //追記
           </td>
           <td>
             <form action="store.php" method="post">
-              <input type="hidden" name="id" value="">
+              <input type="hidden" name="id" value="<?= $todo['id']; ?>">
               <button type="submit">削除</button>
             </form>
           </td>

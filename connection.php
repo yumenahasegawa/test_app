@@ -50,7 +50,7 @@ function getAllRecords()
 
 // 
 // 
-// 
+// 口頭レビュー２の追記
 // 更新処理
 function updateTodoData($post)
 {
@@ -65,4 +65,13 @@ function getTodoTextById($id)
     $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL AND id = $id';
     $data = $dbh->query($sql)->fetch();
     return $data['content'];
+}
+
+// 論理削除のDB処理
+function deleteTodoData($id)
+{
+    $dbh = connectPdo();
+    $now = date('Y-m-d H:i:s');
+    $sql = 'UPDATE todos SET deleted_at ="' . $now . '" WHERE id = ' . $id;
+    $dbh->query($sql);
 }

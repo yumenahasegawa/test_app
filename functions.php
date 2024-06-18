@@ -1,10 +1,6 @@
 <?php
 require_once('connection.php');
 
-function createData($post)
-{
-  createTodoData($post['content']);
-}
 
 // 取得したデータを画面に表示させる
 function getTodoList()
@@ -14,7 +10,7 @@ function getTodoList()
 
 // 
 // 
-// 
+// 口頭レビュー２の追記
 // 編集画面の作成
 function getSelectedTodo($id)
 {
@@ -32,6 +28,9 @@ function savePostedData($post)
         case '/edit.php':
             updateTodoData($post);
             break;
+        case '/index.php': // 口頭レビュー２の追記
+              deleteTodoData($post['id']); // 追記
+              break; // 追記
         default:
             break;
     }

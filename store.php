@@ -1,5 +1,4 @@
 <?php
 require_once('functions.php');
-createData($_POST);
-// savePostedData($_POST); // 追記
+savePostedData($_POST); // 口頭レビュー２
 header('Location: ./index.php');
