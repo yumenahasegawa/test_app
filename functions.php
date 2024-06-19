@@ -42,3 +42,9 @@ function getRefererPath()
     $urlArray = parse_url($_SERVER['HTTP_REFERER']);
     return $urlArray['path'];
 }
+
+// エスケープ処理
+function e($text)
+{
+    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}

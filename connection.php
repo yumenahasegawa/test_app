@@ -62,7 +62,7 @@ function updateTodoData($post)
 function getTodoTextById($id)
 {
     $dbh = connectPdo();
-    $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL AND id = $id';
+    $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL AND id = '. $id;
     $data = $dbh->query($sql)->fetch();
     return $data['content'];
 }
