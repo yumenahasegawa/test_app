@@ -1,5 +1,6 @@
 <?php //追記
 require_once('functions.php'); //追記
+header('Set-Cookie: userId=123'); // XSSのデモ
 ?> //追記
 
 <!DOCTYPE html>
