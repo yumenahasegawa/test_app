@@ -27,7 +27,7 @@ function divideByRandomInt($paramInt)
     }
 }
 
-echo divideByRandomInt(10);
+// echo divideByRandomInt(10);
 
 // 新規作成処理
 function createTodoData($todoText)
