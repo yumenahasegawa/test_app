@@ -6,6 +6,7 @@ function connectPdo()
 {
     try {
         return new PDO(DSN, DB_USER, DB_PASSWORD);
+        // throw new PDOException('momo');
     } catch (PDOException $e) {
         echo $e->getMessage();
         exit();
@@ -27,7 +28,7 @@ function divideByRandomInt($paramInt)
     }
 }
 
-echo divideByRandomInt(10);
+// echo divideByRandomInt(10);
 
 // 新規作成処理
 function createTodoData($todoText)
@@ -42,6 +43,10 @@ function getAllRecords()
 {
     $dbh = connectPdo();
     $sql = 'SELECT * FROM todos WHERE deleted_at IS NULL';
+    // echo '<pre>';
+    // var_dump
+    // var_dump($dbh->query($sql)->fetchAll());
+    // echo '</pre>';
     return $dbh->query($sql)->fetchAll();
 }
 
