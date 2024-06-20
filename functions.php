@@ -44,7 +44,7 @@ function getRefererPath()
 }
 
 // エスケープ処理
-function e($text)
-{
-    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-}
+// function e($text)
+// {
+//     return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+// }
